@@ -6,7 +6,7 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */ {
   "sections": {
     "hero_jVaWmY": {
       "type": "hero",
@@ -35,7 +35,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>With a focus on quality and design, we curate products that enhance your everyday.</p>",
+            "text": "<p>With a focus on quality and design, we curate products that enhance your everyday, hello world.</p>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
@@ -58,10 +58,7 @@
           "blocks": {}
         }
       },
-      "block_order": [
-        "logo_4AeNBU",
-        "text_iXYWz6"
-      ],
+      "block_order": ["logo_4AeNBU", "text_iXYWz6"],
       "name": "t:names.hero",
       "settings": {
         "open_in_new_tab": false,
@@ -320,10 +317,7 @@
               ]
             }
           },
-          "block_order": [
-            "product_card_gallery_JgqDGj",
-            "group_7VTJcC"
-          ]
+          "block_order": ["product_card_gallery_JgqDGj", "group_7VTJcC"]
         }
       },
       "name": "t:names.products_grid",
@@ -347,8 +341,5 @@
       }
     }
   },
-  "order": [
-    "hero_jVaWmY",
-    "product_list_qU3bEB"
-  ]
+  "order": ["hero_jVaWmY", "product_list_qU3bEB"]
 }
