@@ -58,7 +58,7 @@
               max-width: 470px;
             "
           >
-            Assapora l’essenza del territorio
+            Assapora l'essenza del territorio
           </h1>
           <div
             style="
@@ -130,7 +130,7 @@
               background: white;
               border-radius: 14px;
               padding: 0.8rem;
-              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
               position: relative;
               transition: all 0.3s ease;
               cursor: pointer;
@@ -200,8 +200,8 @@
                 margin: 0;
               "
             >
-              L'ibisco è noto per le sue proprietà antiossidanti e
-              antinfiammatorie. L'uva Sangiovese è ricca di resveratrolo, un
+              L'ibisco è noto per le sue proprietà antiossidanti e
+              antinfiammatorie. L'uva Sangiovese è ricca di resveratrolo, un
               potente antiossidante che protegge le cellule dai danni e
               contribuisce alla salute cardiovascolare.
             </p>
@@ -212,7 +212,7 @@
               background: white;
               border-radius: 14px;
               padding: 0.8rem;
-              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
               position: relative;
               transition: all 0.3s ease;
               cursor: pointer;
@@ -282,7 +282,7 @@
               background: white;
               border-radius: 14px;
               padding: 0.8rem;
-              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
               position: relative;
               transition: all 0.3s ease;
               cursor: pointer;
@@ -1042,3 +1042,63 @@
     </body>
   </html>
 </section>
+
+{% schema %}
+{
+  "name": "Hero",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Assapora l'essenza del territorio"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle", 
+      "default": "Foglie selezionate con cura, coltivate tra le colline locali. Ogni tazza racconta il gusto e la storia del nostro territorio."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>With a focus on quality and design, we curate products that enhance your everyday.</p>"
+        }
+      ]
+    },
+    {
+      "type": "logo",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero",
+      "blocks": [
+        {
+          "type": "logo"
+        },
+        {
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
