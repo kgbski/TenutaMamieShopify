@@ -340,7 +340,7 @@ p:empty {
 .page-width-normal,
 .page-width-narrow,
 .page-width-content {
-  --page-margin: 16px;
+  --page-margin: 0px;
 }
 
 @media screen and (width >= 750px) {
@@ -348,31 +348,31 @@ p:empty {
   .page-width-normal,
   .page-width-narrow,
   .page-width-content {
-    --page-margin: 40px;
+    --page-margin: 0px;
   }
 }
 
 .page-width-wide {
   /* NOTE: This results in a page width of 2400px because of how we set up margins with grid */
   --page-content-width: var(--wide-page-width);
-  --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2));
+  /* --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2)); */
 }
 
 .page-width-normal {
   --page-content-width: var(--normal-page-width);
-  --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2));
+  /* --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2)); */
 }
 
 .page-width-narrow,
 .page-width-content {
   /* NOTE: This results in a page width of 1400px because of how we set up margins with grid */
   --page-content-width: var(--narrow-page-width);
-  --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2));
+  /* --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2)); */
 }
 
 .page-width-content {
   --page-content-width: var(--normal-content-width);
-  --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2));
+  /* --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2)); */
 }
 
 /* Section width full vs. page
@@ -575,10 +575,9 @@ p:empty {
   .grid {
     display: grid;
     gap: 0;
-    grid-template-columns: var(--margin-4xl) repeat(
-        var(--centered-column-number),
-        minmax(0, 1fr)
-      ) var(--margin-4xl);
+    grid-template-columns:
+      var(--margin-4xl) repeat(var(--centered-column-number), minmax(0, 1fr))
+      var(--margin-4xl);
     grid-template-areas: "column-0 column-1 column-2 column-3 column-4 column-5 column-6 column-7 column-8 column-9 column-10 column-11 column-12 column-13";
   }
 }
