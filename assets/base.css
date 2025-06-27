@@ -355,24 +355,24 @@ p:empty {
 .page-width-wide {
   /* NOTE: This results in a page width of 2400px because of how we set up margins with grid */
   --page-content-width: var(--wide-page-width);
-  --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2));
+  /* --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2)); */
 }
 
 .page-width-normal {
   --page-content-width: var(--normal-page-width);
-  --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2));
+  /* --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2)); */
 }
 
 .page-width-narrow,
 .page-width-content {
   /* NOTE: This results in a page width of 1400px because of how we set up margins with grid */
   --page-content-width: var(--narrow-page-width);
-  --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2));
+  /* --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2)); */
 }
 
 .page-width-content {
   --page-content-width: var(--normal-content-width);
-  --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2));
+  /* --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2)); */
 }
 
 /* Section width full vs. page
