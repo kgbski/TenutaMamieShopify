@@ -6,8 +6,8 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
 />
-<header style="height: 90px;background: #FFFBF3;"></header>
-<section class="section-1-cta">
+{% comment %} <header style="height: 90px;background: #FFFBF3;"></header> {% endcomment %}
+<section class="section-1-cta pale-yellow-bg">
   <div class="row" id="ShopSectionRow">
       <div class="col-6 d-none d-sm-none d-md-block">
           <div class="row d-flex" id="DeskTopCTA">
@@ -45,249 +45,253 @@
           </div>
       </div>
       <div class="col info-col" id="Section1Info">
-          <div class="row info-tag-row" id="Info">
-              <div class="col-auto mb-2 tag-col" id="StarRate">
-                  <div class="row rounded-4 solid-border">
-                      <div class="col-auto info-tags"><img class="img-fluid" width="18" height="18" src="{{ 'star-icon.svg' | asset_url }}" style="width: 20px;height: 20px;"><span>4,5 (404)</span></div>
-                  </div>
-              </div>
-              <div class="col-auto mb-2 tag-col">
-                  <div class="row rounded-4 solid-border">
-                      <div class="col-auto info-tags"><img class="img-fluid" width="20" height="20" src="{{ 'tea-bag-icon.svg' | asset_url }}" style="width: 20px;height: 20px;"><span>20 Bustine A Piramide Compostabile</span></div>
-                  </div>
-              </div>
-              <div class="col-auto mb-2 tag-col">
-                  <div class="row rounded-4 solid-border">
-                      <div class="col-auto info-tags"><img class="img-fluid" width="18" height="18" src="{{ 'world-icon.svg' | asset_url }}" style="width: 20px;height: 20px;"><span>Italia</span></div>
-                  </div>
-              </div>
-          </div>
-          <div class="row">
+          <div class="row section1-info-row">
               <div class="col">
-                  <h1 style="font-family: 'CocogooseProLetterpressTrial';text-transform: uppercase;margin-top: 4px;color: #524E6A;">Tisana di&nbsp;fiori di&nbsp;Ibisco e&nbsp;Uva Sangiovese.</h1>
-                  <p style="margin-top: 24px;font-size: 18px;line-height: 26px;color: #28293A;align-self: stretch;">Fiori di&nbsp;Ibisco e&nbsp;Uva Sangiovese per una tisana tonificante. Un&nbsp;effetto tonificante che libera la&nbsp;mente.</p>
-              </div>
-          </div>
-          <div class="carousel slide d-md-none" data-bs-ride="false" id="MobileCTA1">
-              <div class="carousel-inner">
-                  <div class="carousel-item active">
-                      <div class="d-flex justify-content-end">
-                          <div class="row w-100 m-0 cta-row">
-                              <div class="col rounded-4 d-flex justify-content-center align-items-center me-3 mb-3 orange-bg orange-tea-box"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}" style="max-width: 312px;max-height: 390px;"></div>
-                              <div class="col-3">
-                                  <div class="row h-100 flex-column mb-3 cta-box">
-                                      <div class="col rounded-4 d-flex justify-content-center align-items-center mb-3 orange-bg"><span>WIP</span></div>
-                                      <div class="col rounded-4 d-flex justify-content-center align-items-center mb-3 orange-bg"><span>WIP</span></div>
-                                      <div class="col rounded-4 d-flex justify-content-center align-items-center mb-3 orange-bg"><span>WIP</span></div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="carousel-item">
-                      <div class="col rounded-4 d-flex justify-content-center align-items-center orange-bg" style="height: 100%;"><img class="img-fluid" width="240" height="299" src="{{ 'pure-tea.png' | asset_url }}"></div>
-                  </div>
-                  <div class="carousel-item">
-                      <div class="col rounded-4 d-flex justify-content-center align-items-center orange-bg" style="height: 100%;"><img class="img-fluid" width="240" height="299" src="{{ 'orange-box.png' | asset_url }}" alt="Orange Tea Box"></div>
-                  </div>
-                  <div class="carousel-item">
-                      <div class="col-auto d-flex justify-content-center p-0" style="height: 100%;"><img class="img-fluid" width="342" height="360" src="{{ 'Tea-Pool-Mobile.png' | asset_url }}" alt="Tea With Pool"></div>
-                  </div>
-              </div>
-              <div><a class="carousel-control-prev" href="#MobileCTA1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#MobileCTA1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
-              <div class="carousel-indicators rounded-4"><button type="button" data-bs-target="#MobileCTA1" data-bs-slide-to="0" class="active"></button> <button type="button" data-bs-target="#MobileCTA1" data-bs-slide-to="1"></button> <button type="button" data-bs-target="#MobileCTA1" data-bs-slide-to="2"></button> <button type="button" data-bs-target="#MobileCTA1" data-bs-slide-to="3"></button></div>
-          </div>
-          <div class="row" style="margin-top: 12px;">
-              <div class="col card">
-                  <div class="row">
-                      <div class="col mb-3">
-                          <div class="d-flex align-items-center">
-                              <div class="flex-grow-1 border-top"></div>
-                              <h5 class="mb-0 mx-3" style="font-size: 22px;">Tee</h5>
-                              <div class="flex-grow-1 border-top"></div>
-                          </div>
-                          <div class="row gx-2 gy-2 mt-2">
-                              <div class="col-auto">
-                                  <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                                      <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                                      <div style="width: 100%;height: 100%;">
-                                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                                              <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-auto">
-                                  <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                                      <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                                      <div style="width: 100%;height: 100%;">
-                                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                                              <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-auto">
-                                  <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                                      <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                                      <div style="width: 100%;height: 100%;">
-                                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                                              <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-auto">
-                                  <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                                      <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                                      <div style="width: 100%;height: 100%;">
-                                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                                              <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-auto">
-                                  <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                                      <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                                      <div style="width: 100%;height: 100%;">
-                                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                                              <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col mb-3">
-                          <div class="d-flex align-items-center">
-                              <div class="flex-grow-1 border-top"></div>
-                              <h5 class="mb-0 mx-3" style="font-size: 22px;">Ricette di Mamie</h5>
-                              <div class="flex-grow-1 border-top"></div>
-                          </div>
-                          <div class="row gx-2 gy-2 mt-2">
-                              <div class="col-auto">
-                                  <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                                      <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                                      <div style="width: 100%;height: 100%;">
-                                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                                              <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-auto">
-                                  <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                                      <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                                      <div style="width: 100%;height: 100%;">
-                                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                                              <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-auto">
-                                  <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                                      <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                                      <div style="width: 100%;height: 100%;">
-                                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                                              <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-auto">
-                                  <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                                      <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                                      <div style="width: 100%;height: 100%;">
-                                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                                              <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col">
-                          <div class="d-flex align-items-center">
-                              <div class="flex-grow-1 border-top"></div>
-                              <h5 class="mb-0 mx-3" style="font-size: 22px;">Tisane</h5>
-                              <div class="flex-grow-1 border-top"></div>
-                          </div>
-                          <div class="row gx-2 gy-2 mt-2">
-                              <div class="col-auto">
-                                  <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                                      <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                                      <div style="width: 100%;height: 100%;">
-                                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                                              <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-auto">
-                                  <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                                      <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                                      <div style="width: 100%;height: 100%;">
-                                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                                              <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-auto">
-                                  <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                                      <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                                      <div style="width: 100%;height: 100%;">
-                                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                                              <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-auto">
-                                  <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                                      <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                                      <div style="width: 100%;height: 100%;">
-                                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                                              <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="row mt-3 card">
-              <div class="col">
-                  <div class="row">
-                      <div class="col-auto px-0">
-                          <h2 class="mb-0 header-color" style="font-size: 34px;">EUR 3,95</h2>
-                      </div>
-                      <div class="col d-flex align-items-center"><span class="secondary-color" style="text-decoration: line-through;">EUR 4,95</span></div>
-                      <div class="col-auto rounded-4 d-flex justify-content-center align-items-center pink" style="/*width: 54px;*/height: 32px;color: white;/*font-size: 24px;*/"><span>-15%</span></div>
-                  </div>
-                  <div class="row" style="margin-top: 20px;">
-                      <div class="col">
-                          <div class="row">
-                              <div class="col p-0 secondary-color"><span>Quantity</span></div>
-                              <div class="col d-flex justify-content-end p-0 secondary-color"><span>20 bustine a piramide di origine vegetale</span></div>
-                          </div>
-                          <div class="row" style="margin-top: 12px;">
-                              <div class="col-auto d-flex align-items-center solid-border" style="width: 140px;height: 58px;"><button class="btn p-0" type="button" style="margin: 0 12px;"><img class="img-fluid position-relative" width="24" height="24" src="{{ 'minus.svg' | asset_url }}"></button>
-                                  <div class="d-flex justify-content-center align-items-center" style="width: 20px;height: 24px;font-size: 23px;"><span>1</span></div><img class="img-fluid" width="24" height="24" src="{{ 'plus.svg' | asset_url }}" style="margin: 0 12px;">
-                              </div>
-                              <div class="col"><button class="btn btn-primary" type="button">Button Now</button></div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+                <div class="row info-tag-row" id="Info">
+                    <div class="col-auto mb-2 tag-col" id="StarRate">
+                        <div class="row rounded-4 solid-border">
+                            <div class="col-auto info-tags d-flex align-items-center"><img class="img-fluid" width="18" height="18" src="{{ 'star-icon.svg' | asset_url }}" style="width: 20px;height: 20px;"><span>4,5 (404)</span></div>
+                        </div>
+                    </div>
+                    <div class="col-auto mb-2 tag-col">
+                        <div class="row rounded-4 solid-border">
+                            <div class="col-auto info-tags d-flex align-items-center"><img class="img-fluid" width="20" height="20" src="{{ 'tea-bag-icon.svg' | asset_url }}" style="width: 20px;height: 20px;"><span>20 Bustine A Piramide Compostabile</span></div>
+                        </div>
+                    </div>
+                    <div class="col-auto mb-2 tag-col">
+                        <div class="row rounded-4 solid-border">
+                            <div class="col-auto info-tags d-flex align-items-center"><img class="img-fluid" width="18" height="18" src="{{ 'world-icon.svg' | asset_url }}" style="width: 20px;height: 20px;"><span>Italia</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h1 style="font-family: 'CocogooseProLetterpressTrial';text-transform: uppercase;margin-top: 4px;color: #524E6A;">Tisana di&nbsp;fiori di&nbsp;Ibisco e&nbsp;Uva Sangiovese.</h1>
+                        <p style="margin-top: 24px;font-size: 18px;line-height: 26px;color: #28293A;align-self: stretch;">Fiori di&nbsp;Ibisco e&nbsp;Uva Sangiovese per una tisana tonificante. Un&nbsp;effetto tonificante che libera la&nbsp;mente.</p>
+                    </div>
+                </div>
+                <div class="carousel slide d-md-none" data-bs-ride="false" id="MobileCTA1">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="d-flex justify-content-end">
+                                <div class="row w-100 m-0 cta-row">
+                                    <div class="col rounded-4 d-flex justify-content-center align-items-center me-3 mb-3 orange-bg orange-tea-box"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}" style="max-width: 312px;max-height: 390px;"></div>
+                                    <div class="col-3">
+                                        <div class="row h-100 flex-column mb-3 cta-box">
+                                            <div class="col rounded-4 d-flex justify-content-center align-items-center mb-3 orange-bg"><span>WIP</span></div>
+                                            <div class="col rounded-4 d-flex justify-content-center align-items-center mb-3 orange-bg"><span>WIP</span></div>
+                                            <div class="col rounded-4 d-flex justify-content-center align-items-center mb-3 orange-bg"><span>WIP</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col rounded-4 d-flex justify-content-center align-items-center orange-bg" style="height: 100%;"><img class="img-fluid" width="240" height="299" src="{{ 'pure-tea.png' | asset_url }}"></div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col rounded-4 d-flex justify-content-center align-items-center orange-bg" style="height: 100%;"><img class="img-fluid" width="240" height="299" src="{{ 'orange-box.png' | asset_url }}" alt="Orange Tea Box"></div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-auto d-flex justify-content-center p-0" style="height: 100%;"><img class="img-fluid" width="342" height="360" src="{{ 'Tea-Pool-Mobile.png' | asset_url }}" alt="Tea With Pool"></div>
+                        </div>
+                    </div>
+                    <div><a class="carousel-control-prev" href="#MobileCTA1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#MobileCTA1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+                    <div class="carousel-indicators rounded-4"><button type="button" data-bs-target="#MobileCTA1" data-bs-slide-to="0" class="active"></button> <button type="button" data-bs-target="#MobileCTA1" data-bs-slide-to="1"></button> <button type="button" data-bs-target="#MobileCTA1" data-bs-slide-to="2"></button> <button type="button" data-bs-target="#MobileCTA1" data-bs-slide-to="3"></button></div>
+                </div>
+                <div class="row" style="margin-top: 12px;">
+                    <div class="col card">
+                        <div class="row">
+                            <div class="col mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-grow-1 border-top"></div>
+                                    <h5 class="mb-0 mx-3" style="font-size: 22px;">Tee</h5>
+                                    <div class="flex-grow-1 border-top"></div>
+                                </div>
+                                <div class="row gx-2 gy-2 mt-2">
+                                    <div class="col-auto">
+                                        <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
+                                            <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
+                                            <div style="width: 100%;height: 100%;">
+                                                <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
+                                                    <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
+                                            <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
+                                            <div style="width: 100%;height: 100%;">
+                                                <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
+                                                    <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
+                                            <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
+                                            <div style="width: 100%;height: 100%;">
+                                                <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
+                                                    <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
+                                            <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
+                                            <div style="width: 100%;height: 100%;">
+                                                <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
+                                                    <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
+                                            <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
+                                            <div style="width: 100%;height: 100%;">
+                                                <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
+                                                    <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-grow-1 border-top"></div>
+                                    <h5 class="mb-0 mx-3" style="font-size: 22px;">Ricette di Mamie</h5>
+                                    <div class="flex-grow-1 border-top"></div>
+                                </div>
+                                <div class="row gx-2 gy-2 mt-2">
+                                    <div class="col-auto">
+                                        <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
+                                            <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
+                                            <div style="width: 100%;height: 100%;">
+                                                <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
+                                                    <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
+                                            <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
+                                            <div style="width: 100%;height: 100%;">
+                                                <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
+                                                    <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
+                                            <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
+                                            <div style="width: 100%;height: 100%;">
+                                                <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
+                                                    <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
+                                            <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
+                                            <div style="width: 100%;height: 100%;">
+                                                <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
+                                                    <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-grow-1 border-top"></div>
+                                    <h5 class="mb-0 mx-3" style="font-size: 22px;">Tisane</h5>
+                                    <div class="flex-grow-1 border-top"></div>
+                                </div>
+                                <div class="row gx-2 gy-2 mt-2">
+                                    <div class="col-auto">
+                                        <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
+                                            <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
+                                            <div style="width: 100%;height: 100%;">
+                                                <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
+                                                    <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
+                                            <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
+                                            <div style="width: 100%;height: 100%;">
+                                                <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
+                                                    <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
+                                            <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
+                                            <div style="width: 100%;height: 100%;">
+                                                <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
+                                                    <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
+                                            <div class="position-absolute"><img class="img-fluid" width="1352" height="1692" src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
+                                            <div style="width: 100%;height: 100%;">
+                                                <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
+                                                    <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3 card">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-auto px-0">
+                                <h2 class="mb-0 header-color" style="font-size: 34px;">EUR 3,95</h2>
+                            </div>
+                            <div class="col d-flex align-items-center"><span class="secondary-color" style="text-decoration: line-through;">EUR 4,95</span></div>
+                            <div class="col-auto rounded-4 d-flex justify-content-center align-items-center pink" style="/*width: 54px;*/height: 32px;color: white;/*font-size: 24px;*/"><span>-15%</span></div>
+                        </div>
+                        <div class="row" style="margin-top: 20px;">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col p-0 secondary-color"><span>Quantity</span></div>
+                                    <div class="col d-flex justify-content-end p-0 secondary-color"><span>20 bustine a piramide di origine vegetale</span></div>
+                                </div>
+                                <div class="row" style="margin-top: 12px;">
+                                    <div class="col-auto d-flex align-items-center solid-border" style="width: 140px;height: 58px;"><button class="btn p-0" type="button" style="width: 24px;margin: 0 12px;"><img class="img-fluid position-relative" width="24" height="24" src="{{ 'icon-minus.svg' | asset_url }}"></button>
+                                        <div class="d-flex justify-content-center align-items-center" style="width: 20px;height: 24px;font-size: 23px;"><span>1</span></div><img class="img-fluid" width="24" height="24" src="{{ 'icon-plus.svg' | asset_url }}" style="width: 24px;margin: 0 12px;">
+                                    </div>
+                                    <div class="col"><button class="btn btn-primary" type="button">Button Now</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
           </div>
       </div>
   </div>

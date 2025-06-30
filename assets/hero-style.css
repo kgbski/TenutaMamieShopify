@@ -19,6 +19,10 @@ body {
   color: #28293A;
 }
 
+.pale-yellow-bg {
+  background-color: #FFFCEB;
+}
+
 .info-tags {
   padding: 6px 14px;
 }
@@ -133,10 +137,13 @@ p {
   .cta-row {
     width: 648px;
   }
+  .section1-info-row {
+    width: 648px;
+  }
 }
 
 .section-1-cta {
-  margin: 40px 60px;
+  padding: 40px 60px;
 }
 
 @media (max-width: 576px) {
