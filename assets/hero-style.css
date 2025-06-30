@@ -33,8 +33,14 @@ body {
   margin-left: 12px;
 }
 
-#Section1SideMenu {
+.info-col {
   margin-left: 56px;
+}
+
+@media (max-width: 576px) {
+  .info-col {
+    margin-left: 0;
+  }
 }
 
 .card-body {
@@ -108,5 +114,41 @@ p {
 
 .btn-primary:hover {
   background-color: #E39DC7;
+}
+
+@media (min-width: 1400px) {
+  .cta-box {
+    height: 133px;
+    width: 168px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .tea-in-use-show-img {
+    max-width: 648px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .cta-row {
+    width: 648px;
+  }
+}
+
+.section-1-cta {
+  margin: 40px 60px;
+}
+
+@media (max-width: 576px) {
+  .section-1-cta {
+    margin: 40px 24px;
+  }
+}
+
+.carousel-indicators button {
+  width: 14px !important;
+  height: 14px !important;
+  background-color: white !important;
+  border: 1px solid !important;
 }
 
