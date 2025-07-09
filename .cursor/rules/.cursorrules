@@ -1,0 +1,104 @@
+# Tenuta Mamie Shopify Theme - Cursor Rules
+
+## Project Context
+This is a Shopify theme project for Tenuta Mamie that was created from a sample/demo theme. The primary goal is to REMOVE sample content and create a clean, custom design rather than building new features or adding theme customization options.
+
+## Core Principles
+
+### 1. REMOVE, Don't Add
+- **Priority**: Remove sample content, placeholder text, and demo features
+- **Avoid**: Adding new theme customization options or complex features
+- **Focus**: Clean up existing code rather than writing new code
+- **Goal**: Create a minimal, clean theme specific to Tenuta Mamie
+
+### 2. Sample Content Removal
+- Remove all placeholder text, sample images, and demo content
+- Replace sample product descriptions with real Tenuta Mamie content
+- Remove demo navigation items and replace with actual business structure
+- Clean up sample blog posts and articles
+- Remove any "lorem ipsum" or placeholder content
+
+### 3. Theme Simplification
+- **NO** user theme customization features
+- **NO** complex theme settings or options
+- **NO** multiple color schemes or layout variations
+- **YES** to hardcoded, brand-specific styling
+- **YES** to removing unused sections and blocks
+
+### 4. Code Cleanup Strategy
+- Delete unused sections and templates
+- Remove sample blocks and components
+- Clean up CSS by removing unused styles
+- Simplify JavaScript by removing demo functionality
+- Remove any "example" or "demo" prefixed files
+
+### 5. Brand-Specific Approach
+- Design specifically for Tenuta Mamie's needs
+- Use brand colors, fonts, and styling directly in code
+- Remove any generic or multi-purpose functionality
+- Focus on the specific product types and business model
+
+## File-Specific Guidelines
+
+### Sections (sections/)
+- **Remove**: Any sections with "sample", "demo", "example" in name or content
+- **Keep**: Core functionality like header, footer, product display
+- **Simplify**: Remove complex customization options from section settings
+- **Focus**: Clean, minimal sections specific to Tenuta Mamie
+
+### Templates (templates/)
+- **Remove**: Sample pages and demo content
+- **Simplify**: Remove complex template options
+- **Focus**: Essential pages only (home, product, collection, cart, etc.)
+
+### Assets (assets/)
+- **Remove**: Sample images, demo graphics, placeholder content
+- **Keep**: Only brand-specific assets
+- **Clean**: Remove unused CSS and JavaScript
+
+### Config (config/)
+- **Simplify**: Remove complex theme settings
+- **Focus**: Minimal configuration for Tenuta Mamie's needs
+- **Remove**: Any sample or demo configuration options
+
+## Development Approach
+
+### When Making Changes:
+1. **First**: Identify what sample content to remove
+2. **Second**: Clean up the remaining code
+3. **Third**: Only then consider minimal additions if absolutely necessary
+
+### Code Review Checklist:
+- [ ] Is this removing sample content?
+- [ ] Is this simplifying existing code?
+- [ ] Is this specific to Tenuta Mamie's needs?
+- [ ] Am I avoiding adding new customization features?
+- [ ] Is this making the theme more minimal and focused?
+
+### Red Flags (Avoid These):
+- Adding new theme customization options
+- Creating complex user settings
+- Adding demo or sample content
+- Building features that aren't specific to Tenuta Mamie
+- Making the theme more complex rather than simpler
+
+## Communication Style
+When suggesting changes, always frame them as:
+- "Remove this sample content..."
+- "Clean up this demo section..."
+- "Simplify this by removing..."
+- "Delete this unused sample..."
+
+Rather than:
+- "Add this new feature..."
+- "Create this customization option..."
+- "Build this new component..."
+
+## Success Metrics
+- Reduced file count (fewer sections, templates, assets)
+- Cleaner, more focused code
+- Brand-specific styling and content
+- Minimal theme settings
+- No sample or demo content remaining
+
+Remember: This project is about **subtraction and simplification**, not addition and complexity. 
