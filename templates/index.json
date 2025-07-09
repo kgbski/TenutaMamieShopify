@@ -1,9 +1,9 @@
 {
   "sections": {
-    "hero_jVaWmY": {
+    "main_hero": {
       "type": "hero",
       "settings": {}
     }
   },
-  "order": ["hero_jVaWmY"]
+  "order": ["main_hero"]
 }

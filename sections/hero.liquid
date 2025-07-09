@@ -1,5 +1,13 @@
 <link rel="stylesheet" href="{{ 'hero-style.css' | asset_url }}" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+
+<style>
+  .bgPinkRed { background-color: #D26073 !important; }
+  .bgPastelYellow { background-color: #FFE770 !important; }
+  .bgLavenderRose { background-color: #E38AF3 !important; }
+  .bgLimeGreen { background-color: #C6CD42 !important; }
+</style>
 <section class="section-1-cta pale-yellow-bg">
   <div class="row" id="ShopSectionRow">
     <div class="col-6 d-none d-sm-none d-md-block">
@@ -157,65 +165,41 @@
                 <div class="col mb-3">
                   <div class="d-flex align-items-center">
                     <div class="flex-grow-1 border-top"></div>
-                    <h5 class="mb-0 mx-3" style="font-size: 22px;">Tee</h5>
+                    <h5 class="mb-0 mx-3" style="font-size: 22px;">Herbal Teas</h5>
                     <div class="flex-grow-1 border-top"></div>
                   </div>
                   <div class="row gx-2 gy-2 mt-2">
-                    <div class="col-auto">
-                      <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                        <div class="position-absolute"><img class="img-fluid" width="1352" height="1692"
-                            src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                        <div style="width: 100%;height: 100%;">
-                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                            <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
+                    {% for product in collections.all.products %}
+                      {% if product.type == 'HerbalTeas' %}
+                          {% assign bg_color_tag = "" %}
+                          {% for tag in product.tags %}
+                            {% if tag contains "bg" %}
+                              {% assign bg_color_tag = tag %}
+                              {% break %}
+                            {% endif %}
+                          {% endfor %}
+                          <div class="col-auto">
+                            <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item {{ bg_color_tag }}">
+                              <div class="position-absolute">
+                                {% if product.featured_image %}
+                                  <img class="img-fluid" width="1352" height="1692"
+                                      src="{{ product.featured_image | image_url: width: 1352, height: 1692 }}" 
+                                      alt="{{ product.title }}">
+                                {% else %}
+                                  <img class="img-fluid" width="1352" height="1692"
+                                      src="{{ 'menu-tea-box-1.png' | asset_url }}">
+                                {% endif %}
+                              </div>
+                              <div style="width: 100%;height: 100%;">
+                                <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
+                                  <p class="fw-normal text-center z-2 mb-0">{{ product.title }}</p>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                        <div class="position-absolute"><img class="img-fluid" width="1352" height="1692"
-                            src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                        <div style="width: 100%;height: 100%;">
-                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                            <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                        <div class="position-absolute"><img class="img-fluid" width="1352" height="1692"
-                            src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                        <div style="width: 100%;height: 100%;">
-                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                            <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                        <div class="position-absolute"><img class="img-fluid" width="1352" height="1692"
-                            src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                        <div style="width: 100%;height: 100%;">
-                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                            <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                        <div class="position-absolute"><img class="img-fluid" width="1352" height="1692"
-                            src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                        <div style="width: 100%;height: 100%;">
-                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                            <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                      {% endif %}
+                    {% endfor %}
+
                   </div>
                 </div>
               </div>
@@ -223,54 +207,41 @@
                 <div class="col mb-3">
                   <div class="d-flex align-items-center">
                     <div class="flex-grow-1 border-top"></div>
-                    <h5 class="mb-0 mx-3" style="font-size: 22px;">Ricette di Mamie</h5>
+                    <h5 class="mb-0 mx-3" style="font-size: 22px;">Signature Collection</h5>
                     <div class="flex-grow-1 border-top"></div>
                   </div>
                   <div class="row gx-2 gy-2 mt-2">
-                    <div class="col-auto">
-                      <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                        <div class="position-absolute"><img class="img-fluid" width="1352" height="1692"
-                            src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                        <div style="width: 100%;height: 100%;">
-                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                            <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
+                    {% for product in collections.all.products %}
+                      {% if product.type == 'SignatureCollection' %}
+                          {% assign bg_color_tag = "" %}
+                          {% for tag in product.tags %}
+                            {% if tag contains "bg" %}
+                              {% assign bg_color_tag = tag %}
+                              {% break %}
+                            {% endif %}
+                          {% endfor %}
+                          <div class="col-auto">
+                            <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item {{ bg_color_tag }}">
+                              <div class="position-absolute">
+                                {% if product.featured_image %}
+                                  <img class="img-fluid" width="1352" height="1692"
+                                      src="{{ product.featured_image | image_url: width: 1352, height: 1692 }}" 
+                                      alt="{{ product.title }}">
+                                {% else %}
+                                  <img class="img-fluid" width="1352" height="1692"
+                                      src="{{ 'menu-tea-box-1.png' | asset_url }}">
+                                {% endif %}
+                              </div>
+                              <div style="width: 100%;height: 100%;">
+                                <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
+                                  <p class="fw-normal text-center z-2 mb-0">{{ product.title }}</p>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                        <div class="position-absolute"><img class="img-fluid" width="1352" height="1692"
-                            src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                        <div style="width: 100%;height: 100%;">
-                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                            <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                        <div class="position-absolute"><img class="img-fluid" width="1352" height="1692"
-                            src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                        <div style="width: 100%;height: 100%;">
-                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                            <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                        <div class="position-absolute"><img class="img-fluid" width="1352" height="1692"
-                            src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                        <div style="width: 100%;height: 100%;">
-                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                            <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                      {% endif %}
+                    {% endfor %}
+
                   </div>
                 </div>
               </div>
@@ -278,54 +249,41 @@
                 <div class="col">
                   <div class="d-flex align-items-center">
                     <div class="flex-grow-1 border-top"></div>
-                    <h5 class="mb-0 mx-3" style="font-size: 22px;">Tisane</h5>
+                    <h5 class="mb-0 mx-3" style="font-size: 22px;">The Classics</h5>
                     <div class="flex-grow-1 border-top"></div>
                   </div>
                   <div class="row gx-2 gy-2 mt-2">
-                    <div class="col-auto">
-                      <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                        <div class="position-absolute"><img class="img-fluid" width="1352" height="1692"
-                            src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                        <div style="width: 100%;height: 100%;">
-                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                            <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
+                    {% for product in collections.all.products %}
+                      {% if product.type == 'TheClassics' %}
+                          {% assign bg_color_tag = "" %}
+                          {% for tag in product.tags %}
+                            {% if tag contains "bg" %}
+                              {% assign bg_color_tag = tag %}
+                              {% break %}
+                            {% endif %}
+                          {% endfor %}
+                          <div class="col-auto">
+                            <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item {{ bg_color_tag }}">
+                              <div class="position-absolute">
+                                {% if product.featured_image %}
+                                  <img class="img-fluid" width="1352" height="1692"
+                                      src="{{ product.featured_image | image_url: width: 1352, height: 1692 }}" 
+                                      alt="{{ product.title }}">
+                                {% else %}
+                                  <img class="img-fluid" width="1352" height="1692"
+                                      src="{{ 'menu-tea-box-1.png' | asset_url }}">
+                                {% endif %}
+                              </div>
+                              <div style="width: 100%;height: 100%;">
+                                <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
+                                  <p class="fw-normal text-center z-2 mb-0">{{ product.title }}</p>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                        <div class="position-absolute"><img class="img-fluid" width="1352" height="1692"
-                            src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                        <div style="width: 100%;height: 100%;">
-                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                            <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                        <div class="position-absolute"><img class="img-fluid" width="1352" height="1692"
-                            src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                        <div style="width: 100%;height: 100%;">
-                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                            <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item pink-red">
-                        <div class="position-absolute"><img class="img-fluid" width="1352" height="1692"
-                            src="{{ 'menu-tea-box-1.png' | asset_url }}"></div>
-                        <div style="width: 100%;height: 100%;">
-                          <div class="bg-white position-relative top-50 z-1 px-2 py-2 menu-item-description">
-                            <p class="fw-normal text-center z-2 mb-0">Nero Zenzero E Agrumi</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                      {% endif %}
+                    {% endfor %}
+
                   </div>
                 </div>
               </div>
