@@ -1,6 +1,44 @@
 <link rel="stylesheet" href="{{ 'hero-style.css' | asset_url }}" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
+<script>
+  // Quantity functionality
+  let currentQuantity = 1;
+  
+  function increaseQuantity() {
+    currentQuantity++;
+    document.getElementById('quantity-display').textContent = currentQuantity;
+  }
+  
+  function decreaseQuantity() {
+    if (currentQuantity > 1) {
+      currentQuantity--;
+      document.getElementById('quantity-display').textContent = currentQuantity;
+    }
+  }
+</script>
+
+<style>
+  /* Disable default button pressed border color change for quantity buttons */
+  .btn:focus,
+  .btn:active,
+  .btn:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: transparent !important;
+  }
+  
+  /* Specifically target quantity buttons to ensure no border changes */
+  .btn[onclick*="Quantity"]:focus,
+  .btn[onclick*="Quantity"]:active,
+  .btn[onclick*="Quantity"]:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: transparent !important;
+    background-color: transparent !important;
+  }
+</style>
+
 
 <style>
   .bgPinkRed { background-color: #D26073 !important; }
@@ -16,7 +54,7 @@
           <div class="row cta-row">
             <div
               class="col rounded-4 d-flex justify-content-center align-items-center me-3 mb-sm-3 orange-bg orange-tea-box">
-              <img class="img-fluid d-flex" width="624" height="780" src="{{ 'orange-tea-box.png' | asset_url }}">
+              <img id="main-product-image" class="img-fluid d-flex" width="624" height="780" src="{{ 'orange-tea-box.png' | asset_url }}">
             </div>
             <div class="col-auto col-md-3 col-lg-3 col-xl-3">
               <div class="row h-100 flex-column mb-3 cta-box">
@@ -179,7 +217,10 @@
                             {% endif %}
                           {% endfor %}
                           <div class="col-auto">
-                            <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item {{ bg_color_tag }}">
+                            <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item {{ bg_color_tag }} product-card" 
+                                 data-product-id="{{ product.id }}" 
+                                 data-product-image="{% if product.featured_image %}{{ product.featured_image | image_url: width: 624, height: 780 }}{% else %}{{ 'menu-tea-box-1.png' | asset_url }}{% endif %}"
+                                 onclick="selectProduct(this, '{{ product.id }}')">
                               <div class="position-absolute">
                                 {% if product.featured_image %}
                                   <img class="img-fluid" width="1352" height="1692"
@@ -221,7 +262,10 @@
                             {% endif %}
                           {% endfor %}
                           <div class="col-auto">
-                            <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item {{ bg_color_tag }}">
+                            <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item {{ bg_color_tag }} product-card" 
+                                 data-product-id="{{ product.id }}" 
+                                 data-product-image="{% if product.featured_image %}{{ product.featured_image | image_url: width: 624, height: 780 }}{% else %}{{ 'menu-tea-box-1.png' | asset_url }}{% endif %}"
+                                 onclick="selectProduct(this, '{{ product.id }}')">
                               <div class="position-absolute">
                                 {% if product.featured_image %}
                                   <img class="img-fluid" width="1352" height="1692"
@@ -263,7 +307,10 @@
                             {% endif %}
                           {% endfor %}
                           <div class="col-auto">
-                            <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item {{ bg_color_tag }}">
+                            <div class="d-flex overflow-hidden justify-content-center align-items-center menu-item {{ bg_color_tag }} product-card" 
+                                 data-product-id="{{ product.id }}" 
+                                 data-product-image="{% if product.featured_image %}{{ product.featured_image | image_url: width: 624, height: 780 }}{% else %}{{ 'menu-tea-box-1.png' | asset_url }}{% endif %}"
+                                 onclick="selectProduct(this, '{{ product.id }}')">
                               <div class="position-absolute">
                                 {% if product.featured_image %}
                                   <img class="img-fluid" width="1352" height="1692"
@@ -309,13 +356,16 @@
                   </div>
                   <div class="row" style="margin-top: 12px;">
                     <div class="col-auto d-flex align-items-center solid-border" style="width: 140px;height: 58px;">
-                      <button class="btn p-0" type="button" style="width: 24px;margin: 0 12px;"><img
+                      <button class="btn p-0" type="button" onclick="decreaseQuantity()" style="width: 24px;margin: 0 12px;"><img
                           class="img-fluid position-relative" width="24" height="24"
                           src="{{ 'icon-minus.svg' | asset_url }}"></button>
                       <div class="d-flex justify-content-center align-items-center"
-                        style="width: 20px;height: 24px;font-size: 23px;"><span>1</span></div><img class="img-fluid"
+                        style="width: 20px;height: 24px;font-size: 23px;"><span id="quantity-display">1</span></div>
+                      <button class="btn p-0" type="button" onclick="increaseQuantity()" style="width: 24px;margin: 0 12px;">
+                        <img class="img-fluid"
                         width="24" height="24" src="{{ 'icon-plus.svg' | asset_url }}"
                         style="width: 24px;margin: 0 12px;">
+                      </button>
                     </div>
                     <div class="col"><button class="btn btn-primary" type="button">Button Now</button></div>
                   </div>
@@ -1438,6 +1488,93 @@
       }
     }
   </style>
+
+  <style>
+    .product-card {
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .bgPinkRed.product-card.active {
+      border: 2px solid #D26073;
+      box-shadow: 0 4px 12px rgba(210, 96, 115, 0.3);
+      transform: translateY(-2px);
+    }
+    
+    .bgPinkRed.product-card.active .menu-item-description {
+      background-color: #D26073 !important;
+    }
+
+    .bgPastelYellow.product-card.active .menu-item-description {
+      background-color: #FFE770 !important;
+      color: black !important;
+    }
+
+    .bgLavenderRose.product-card.active .menu-item-description {
+      background-color: #E38AF3 !important;
+    }
+
+    .bgLimeGreen.product-card.active .menu-item-description {
+      background-color: #C6CD42 !important;
+    }
+
+    .bgPinkRed.product-card.active .menu-item-description p {
+      color: white !important;
+    }
+
+    .bgPastelYellow.product-card.active .menu-item-description p {
+      color: black !important;
+    }
+
+    .bgLavenderRose.product-card.active .menu-item-description p {
+      color: white !important;
+    }
+
+    .bgLimeGreen.product-card.active .menu-item-description p {
+      color: black !important;
+    }
+  </style>
+
+  <script>
+    function selectProduct(element, productId) {
+      // Remove active class from all product cards
+      document.querySelectorAll('.product-card').forEach(card => {
+        card.classList.remove('active');
+      });
+      
+      // Add active class to clicked product card
+      element.classList.add('active');
+      
+      // Update the main product image
+      const productImage = element.getAttribute('data-product-image');
+      const mainImage = document.getElementById('main-product-image');
+      if (mainImage && productImage) {
+        mainImage.src = productImage;
+        mainImage.alt = element.querySelector('.menu-item-description p').textContent;
+      }
+      
+      // You can add additional functionality here, like:
+      // - Updating product details
+      // - Adding to cart
+      // - Showing product information
+      console.log('Selected product:', productId);
+      
+      // Optional: Update product details section
+      updateProductDetails(productId);
+    }
+    
+    function updateProductDetails(productId) {
+      // This function can be used to update product details when a product is selected
+      // For example, updating price, description, etc.
+      console.log('Updating details for product:', productId);
+    }
+  </script>
   </body>
 
   </html>
