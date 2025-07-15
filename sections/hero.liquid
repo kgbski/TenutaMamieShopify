@@ -87,7 +87,7 @@
             </div>
             <div class="col rounded-4 d-flex justify-content-center align-items-center mt-3 orange-bg">
               <div class="row">
-                <div class="col rounded-4"><img class="img-fluid" width="240" height="299"
+                <div class="col rounded-4"><img id="product-secondary-image" class="img-fluid" width="240" height="299"
                     src="{{ 'orange-box.png' | asset_url }}"></div>
               </div>
             </div>
@@ -1557,6 +1557,17 @@
       if (mainImage && productImage) {
         mainImage.src = productImage;
         mainImage.alt = element.querySelector('.menu-item-description p').textContent;
+      }
+      
+      // Update the secondary product image (orange-box image)
+      const secondaryImage = document.getElementById('product-secondary-image');
+      if (secondaryImage && productImage) {
+        secondaryImage.src = productImage;
+        secondaryImage.alt = element.querySelector('.menu-item-description p').textContent;
+        // Maintain the same size as the original orange-box image
+        secondaryImage.style.width = '240px';
+        secondaryImage.style.height = '299px';
+        secondaryImage.style.objectFit = 'cover';
       }
       
       // You can add additional functionality here, like:
