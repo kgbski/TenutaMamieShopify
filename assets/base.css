@@ -4344,6 +4344,16 @@ text-component {
   justify-content: center;
 }
 
+@font-face {
+  font-family: 'Cocogoose Condensed';
+  src: url( 'CocogooseCondensed-Letterpres.woff') format('woff'),
+       url('CocogooseCondensed-Letterpres.woff2') format('woff2'),
+       url('CocogooseCondensed-Letterpres.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+
 .related-title {
   width: 100%;
   height: 62px;
@@ -4407,6 +4417,7 @@ text-component {
   width: 251.2px;
   height: 450px;
 }
+
 .related-item {
   width: 100%;
   height: 358px;
@@ -4444,8 +4455,6 @@ text-component {
 .related-card-item:nth-child(7) .related-item {
   background: radial-gradient(ellipse at center, white 0%, #B9ED77 60%);
 }
-
-
 
 .related-item img {
   max-width: 100%;
