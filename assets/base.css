@@ -4338,7 +4338,7 @@ text-component {
   z-index: 3;
 }
 .related-container{
-  width: 1320px;
+  width: 74%;
   display: block;
   text-align: center;
   justify-content: center;
@@ -4381,6 +4381,7 @@ text-component {
   order: 0;
   align-self: stretch;
   flex-grow: 0;
+  margin-bottom: 28px;
 }
 
 .related-carousel-wrapper {
@@ -4734,12 +4735,18 @@ text-component {
   }
 }
 
-@media (max-width: 990px) {
+@media (max-width: 990px) {  
+  .footer-arrow {
+    width: 50px;
+    height: 30px;
+  }
   .container-tea {
     flex-direction: column;
     align-items: center;
   }
-
+  .related-title{
+    font-size: 30px;
+  }
   .instructions {
     justify-content: center;
   }
@@ -4754,6 +4761,15 @@ text-component {
   .brewing-instructions .headline {
     font-size: 28px;
   }
+
+  .related-title{
+    font-size: 28px;
+  }
+
+  .related-container{
+    width: 100%;
+  }
+
   .container-tea {
     display: flex;
     width: 100%;
