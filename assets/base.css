@@ -4345,11 +4345,23 @@ text-component {
 }
 
 @font-face {
+  font-family: 'Work Sans';
+  src: url('WorkSans-VariableFont_wght.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Cocogoose Condensed';
   src: url( 'CocogooseCondensed-Letterpres.woff') format('woff'),
        url('CocogooseCondensed-Letterpres.woff2') format('woff2'),
        url('CocogooseCondensed-Letterpres.ttf') format('truetype');
   font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fredoka One';
+  src: url('Fredoka-VariableFont_wdth,wght.ttf') format('truetype');
   font-style: normal;
 }
 
@@ -4597,4 +4609,119 @@ text-component {
   height: 242px;
   left: calc(50% - 176.24px / 2 + 0.4px);
   top: calc(50% - 242px / 2);
+}
+
+.brewing-instructions {
+  width: 100%;
+  background: #fffce8;
+  height: 735px;
+  flex: none;
+  order: 3;
+  align-self: stretch;
+  flex-grow: 0;
+  z-index: 4;
+  padding: 93px 60px 0px 60px;
+  display: block;
+}
+
+.container-tea{  
+  padding: 0px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.brewing-instructions .headline {
+  text-align: center;
+  font-family: 'Cocogoose Condensed';
+  font-size: 52px;
+  text-transform: uppercase;
+  color: #524E6A;
+  margin-bottom: 40px;
+}
+
+.brewing-instructions .instructions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  width: 700px;
+  height: 500px;
+}
+
+.instruction-step {
+  background-color: #fff6c2;
+  border: 1px solid #474A6B;
+  border-radius: 16px;
+  padding: 16px;
+  width: 220px;
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+}
+
+.instruction-step .step-number {
+  position: absolute;
+  width: 25px;
+  height: 48px;
+  left: 25px;
+  top: 16px;
+  font-family: 'Fredoka One';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  z-index: 2;
+  color: #FFFFFF;
+}
+
+.instruction-step .step-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.instruction-step p {
+  width: 190.67px;
+  font-family: 'Work Sans', 'sans-serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #28293A;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  z-index: 1;
+  text-align: left;
+}
+
+.brewing-instructions .benefit {
+  box-sizing: border-box;
+  border-radius: 24px;
+  text-align: center;
+  width: 604px;
+  height: 500px;
+}
+
+.brewing-instructions .benefit img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.brewing-instructions .benefit p {
+  font-family: 'Work Sans';
+  font-size: 16px;
+  color: #28293A;
 }
