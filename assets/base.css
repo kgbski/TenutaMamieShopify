@@ -4614,12 +4614,10 @@ text-component {
 .brewing-instructions {
   width: 100%;
   background: #fffce8;
-  height: 735px;
   flex: none;
   order: 3;
   align-self: stretch;
   flex-grow: 0;
-  z-index: 4;
   padding: 93px 60px 0px 60px;
   display: block;
 }
@@ -4651,7 +4649,6 @@ text-component {
   padding: 0px;
   gap: 16px;
   width: 700px;
-  height: 500px;
 }
 
 .instruction-step {
@@ -4711,7 +4708,6 @@ text-component {
   border-radius: 24px;
   text-align: center;
   width: 604px;
-  height: 500px;
 }
 
 .brewing-instructions .benefit img {
@@ -4724,4 +4720,81 @@ text-component {
   font-family: 'Work Sans';
   font-size: 16px;
   color: #28293A;
+}
+
+
+@media (max-width: 1500px) {
+  .headline {
+    font-size: 52px;
+  }
+
+  .container-tea {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 990px) {
+  .container-tea {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .instructions {
+    justify-content: center;
+  }
+
+  .benefit {
+    width: 90%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 750px) {
+  .brewing-instructions .headline {
+    font-size: 28px;
+  }
+  .container-tea {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .brewing-instructions{
+    padding: 80px 24px 0px 24px;
+  }
+
+  .brewing-instructions .instructions {
+    display: block;
+    width: 100%;
+  }
+
+  .instruction-step {
+    width: 100%;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  .instruction-step .step-image{
+    display: flex;
+    width: 100%;
+    height: 154px;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  .instruction-step p {
+    width: 100%;
+    font-family: 'Work Sans';
+    font-size: 16px;
+    color: #28293A;
+  }
+
+  .step-number {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .brewing-instructions .benefit  {
+    width: 100%;
+  }
 }
