@@ -39,6 +39,8 @@
     {% endif %}
 
     {{ content_for_header }}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
 
   <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
@@ -65,5 +67,29 @@
     {% if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add-modal' %}
     {% endif %}
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const carousel = document.querySelector('.related-carousel');
+      const item = carousel.querySelector('.related-card-item');
+
+      function getScrollAmount() {
+        if (!item) return 0;
+        const style = window.getComputedStyle(item);
+        const marginRight = parseFloat(style.marginRight) || 0;
+        return item.offsetWidth + marginRight;
+      }
+
+      document.querySelector('.arrow.left').addEventListener('click', () => {
+        carousel.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+      });
+
+      document.querySelector('.arrow.right').addEventListener('click', () => {
+        carousel.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+
+
   </body>
 </html>
