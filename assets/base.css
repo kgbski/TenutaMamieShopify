@@ -4708,13 +4708,6 @@ text-component {
   text-align: left;
 }
 
-.brewing-instructions .benefit {
-  box-sizing: border-box;
-  border-radius: 24px;
-  text-align: center;
-  width: 604px;
-}
-
 .brewing-instructions .benefit img {
   max-width: 100%;
   height: auto;
@@ -4731,6 +4724,101 @@ text-component {
     height: 304px; 
     width: 350px; 
     max-width: 900px
+}
+
+.brewing-instructions .benefit {
+    position: relative;
+    width: 604px;
+    height: 500px;
+    background: #FED500;
+    border: 1px solid #474A6B;
+    border-radius: 24px;
+    overflow: hidden;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.fruit {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.orange {
+    width: 50px;
+    height: 89px;
+    left: 430px;
+    top: 134px;
+    filter: blur(0.5px);
+    transform: rotate(-60deg);
+}
+
+.raspberry {
+    width: 56px;
+    height: 70px;
+    left: 192px;
+    top: 285px;
+    filter: blur(0.5px);
+    transform: rotate(30deg);
+}
+
+.currant {
+    width: 55px;
+    height: 122px;
+    left: 0px;
+    top: 244px;
+    filter: blur(0.5px);
+    transform: matrix(0.26, 0.97, -0.97, 0.26, 0, 0);
+}
+
+.lemon{
+    filter: blur(0.5px);
+    transform: matrix(0.26, 0.97, -0.97, 0.26, 0, 0);
+    position: absolute;
+    width: 119px;
+    height: 135px;
+    left: -40px;
+    top: -26px;
+
+}
+
+.blueberry {
+    width: 59px;
+    height: 58px;
+    left: 552px;
+    top: 247px;
+    filter: blur(0.75px);
+}
+
+.footer-image {
+    position: absolute;
+    width: 405px;
+    height: 374px;
+    left: 198px;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.footer-curve {
+    position: absolute;
+    width: 688px;
+    height: 390px;
+    left: -42px;
+    top: 305px;
+}
+
+.footer-text {
+    position: absolute;
+    width: 570px;
+    left: 16px;
+    top: 406px;
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #28293A;
 }
 
 @media (max-width: 1500px) {
