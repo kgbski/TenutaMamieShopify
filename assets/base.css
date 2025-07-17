@@ -4717,6 +4717,7 @@ text-component {
   font-family: 'Work Sans';
   font-size: 16px;
   color: #28293A;
+  text-align: left;
 }
 
 .image-file {
