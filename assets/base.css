@@ -4338,10 +4338,16 @@ text-component {
   z-index: 3;
 }
 .related-container{
-  width: 1320px;
+  width: 74%;
   display: block;
   text-align: center;
   justify-content: center;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('WorkSans-VariableFont_wght.ttf') format('truetype');
+  font-style: normal;
 }
 
 @font-face {
@@ -4350,6 +4356,12 @@ text-component {
        url('CocogooseCondensed-Letterpres.woff2') format('woff2'),
        url('CocogooseCondensed-Letterpres.ttf') format('truetype');
   font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fredoka One';
+  src: url('Fredoka-VariableFont.ttf') format('truetype');
   font-style: normal;
 }
 
@@ -4369,6 +4381,7 @@ text-component {
   order: 0;
   align-self: stretch;
   flex-grow: 0;
+  margin-bottom: 28px;
 }
 
 .related-carousel-wrapper {
@@ -4597,4 +4610,403 @@ text-component {
   height: 242px;
   left: calc(50% - 176.24px / 2 + 0.4px);
   top: calc(50% - 242px / 2);
+}
+
+.brewing-instructions {
+  width: 100%;
+  background: #fffce8;
+  flex: none;
+  order: 3;
+  align-self: stretch;
+  flex-grow: 0;
+  padding: 93px 60px 0px 60px;
+  display: block;
+}
+
+.container-tea{  
+  padding: 0px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.brewing-instructions .headline {
+  text-align: center;
+  font-family: 'Cocogoose Condensed';
+  font-size: 52px;
+  text-transform: uppercase;
+  color: #524E6A;
+  margin-bottom: 40px;
+}
+
+.brewing-instructions .instructions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  width: 700px;
+}
+
+.instruction-step {
+  background-color: #fff6c2;
+  border: 1px solid #474A6B;
+  border-radius: 16px;
+  padding: 16px;
+  width: 220px;
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+}
+
+.instruction-step .step-number {
+  position: absolute;
+  width: 25px;
+  height: 48px;
+  left: 25px;
+  top: 16px;
+  font-family: 'Fredoka One';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  z-index: 2;
+  color: #FFFFFF;
+}
+
+.instruction-step .step-image {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.instruction-step p {
+  width: 190.67px;
+  font-family: 'Work Sans', 'sans-serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #28293A;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  z-index: 1;
+  text-align: left;
+}
+
+.brewing-instructions .benefit img {
+  max-width: 100%;
+  height: auto;
+}
+
+.brewing-instructions .benefit p {
+  font-family: 'Work Sans';
+  font-size: 16px;
+  color: #28293A;
+  text-align: left;
+}
+
+.image-file {
+    height: 304px; 
+    width: 350px; 
+    max-width: 900px
+}
+
+.brewing-instructions .benefit {
+    position: relative;
+    width: 604px;
+    height: 500px;
+    background: #FED500;
+    border: 1px solid #474A6B;
+    border-radius: 24px;
+    overflow: hidden;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.fruit {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.orange {
+    width: 50px;
+    height: 89px;
+    left: 72%;
+    top: 134px;
+    filter: blur(0.5px);
+    transform: rotate(-60deg);
+}
+
+.raspberry {
+    width: 56px;
+    height: 2%;
+    left: 192px;
+    top: 285px;
+    filter: blur(0.5px);
+    transform: rotate(30deg);
+}
+
+.currant {
+    width: 55px;
+    height: 122px;
+    left: 0px;
+    top: 244px;
+    filter: blur(0.5px);
+    transform: matrix(0.26, 0.97, -0.97, 0.26, 0, 0);
+}
+
+.lemon{
+    filter: blur(0.5px);
+    transform: matrix(0.26, 0.97, -0.97, 0.26, 0, 0);
+    position: absolute;
+    width: 119px;
+    height: 135px;
+    left: -40px;
+    top: -26px;
+
+}
+
+.blueberry {
+    width: 59px;
+    height: 58px;
+    left: 91%;
+    top: 247px;
+    filter: blur(0.75px);
+}
+
+.footer-image {
+    position: absolute;
+    width: 405px;
+    height: 374px;
+    left: 33%;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.footer-curve {
+    position: absolute;
+    width: 688px;
+    height: 390px;
+    left: -42px;
+    top: 305px;
+}
+
+.footer-text {
+    position: absolute;
+    padding: 16px;
+    padding-top: 0px;
+    width: 100%;
+    top: 406px;
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #28293A;
+}
+
+@media (max-width: 1500px) {
+  .headline {
+    font-size: 52px;
+  }
+
+  .container-tea {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 990px) {  
+  .footer-arrow {
+    width: 50px;
+    height: 30px;
+  }
+  .container-tea {
+    flex-direction: column;
+    align-items: center;
+  }
+  .related-title{
+    font-size: 30px;
+  }
+  .instructions {
+    justify-content: center;
+  }
+
+  .benefit {
+    width: 90%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 750px) {
+      
+  .footer-curve {
+      width: 100%;
+      height: 250px;
+      left: 0px;
+      top: 300px;
+  }
+
+  .footer-curve .image-icon{
+    height: 100% !important;
+  }
+  
+  .image-icon{
+    margin-bottom: 0px !important;
+  }
+
+  .brewing-instructions .headline {
+    font-size: 28px;
+  }
+
+  .related-title{
+    font-size: 28px;
+  }
+
+  .related-container{
+    width: 100%;
+  }
+
+  .container-tea {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .brewing-instructions{
+    padding: 80px 24px 0px 24px;
+  }
+
+  .brewing-instructions .instructions {
+    display: block;
+    width: 100%;
+  }
+
+  .instruction-step {
+    width: 100%;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  .instruction-step .step-images{
+    display: flex;
+    width: 100%;
+    height: 154px;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  } 
+
+  .instruction-step .step-image {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.footer-image {
+    position: absolute;
+    width: 405px;
+    height: 374px;
+    left: 45%;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.image-file {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-file2 {
+    width: 110%;  
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s ease; 
+}
+  .instruction-step p {
+    width: 100%;
+    font-family: 'Work Sans';
+    font-size: 16px;
+    color: #28293A;
+  }
+
+  .step-number {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .brewing-instructions .benefit  {
+    width: 100%;
+  }
+  
+}
+
+@media (max-width: 600px) {
+  .footer-image {
+    position: absolute;
+    width: 405px;
+    height: 374px;
+    left: 30%;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+  .orange {
+      width: 50px;
+      height: 89px;
+      left: 50%;
+      top: 134px;
+      filter: blur(0.5px);
+      transform: rotate(-60deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-image {
+    position: absolute;
+    width: 405px;
+    height: 374px;
+    left: 15%;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+  .orange {
+      width: 50px;
+      height: 89px;
+      left: 70%;
+      top: 134px;
+      filter: blur(0.5px);
+      transform: rotate(-60deg);
+  }
+  
+  .footer-text{
+   top: 390px;
+  }
 }
